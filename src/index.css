@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+}
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+.caret-down::before {
+  transform: rotate(90deg);
+}
+.nested {
+  display: none;
+}
+.active {
+  display: block;
+  padding-left: 28px;
+}
+.item.selected {
+  background-color: #f0f8ff;
+}
+
+@media only screen and (max-width: 890px) {
+  * {
+    font-size: 12px;
+  }
+
+  .flexible-blocks,
+  .flexible-block {
+    width: 100%;
+    display: block;
+    margin: 0;
+  }
+  .flexible-block:first-child {
+    margin-bottom: 10px;
+  }
+}
